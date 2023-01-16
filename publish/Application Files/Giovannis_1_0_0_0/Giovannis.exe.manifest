@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Giovannis.exe" version="1.0.0.0" publicKeyToken="e1d502f80bc10471" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="favicon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Giovannis" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Giovannis.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- Opciones del manifiesto UAC
+             Si quiere cambiar el nivel del Control de cuentas de usuario de Windows reemplace el 
+             nodo requestedExecutionLevel por uno de los siguientes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Especificar el elemento requestedExecutionLevel deshabilitará la virtualización de archivos y registros. 
+            Quite este elemento si la aplicación necesita esta virtualización para la compatibilidad
+            con versiones anteriores.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Giovannis.exe" size="1023968">
+      <assemblyIdentity name="Giovannis" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>BdsBp/gKSXBoQdrRnmwvH7/OHF4sCYQydqpQFKyAGOU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Objetos.dll" size="39936">
+      <assemblyIdentity name="Objetos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Llja46aKQNr+I11fslwcD8xSVDsLuySoGnK/Rs8C5aY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Assets\settings.png" size="6350">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3mLpgzAniaFO2IUg2ADPxY1FCJS5iZwoib78RPCoZmk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\data\giovannis.mdf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Cq/iTAuDEsTCsYxNDGF06xunFsskApsXNvteNXBE+ks=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\data\giovannis_log.ldf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>MRn4zim80+XefDoZOZZ71g4zAieLp4uRguQEvejQ20k=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="favicon.ico" size="15086">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>x2vtcI2TXJ/MBmBfD1SZZVI9R8i8w7dNFyNfL6TddEw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Giovannis.exe.config" size="573">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>waX+PkZTps6wEERBPINy79L+FIvX7jWXSlcgLJicVOc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- Una lista de las versiones de Windows en la que se ha probado esta aplicación y
+           con la que se ha diseñado para que trabaje. Quite la marca de comentario de los elementos adecuados y Windows seleccionará 
+           automáticamente el entorno más compatible. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=DESKTOP-D5G1HKL\rem_j" issuerKeyHash="5b0530ccfbde9252b7a11402d322b1a793c9040a" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>++bVvUwlcCh6VGUe6xIy8Oz7I8MoZOJHz+Y8ndMcPbI=</DigestValue></Reference></SignedInfo><SignatureValue>lhN+l+u/otDpM2PRG/ho0AeGQBODjjpTgv9nrs5bE8N928d6vbhU8GubdNWPYGLiM4Nb7+v/AeZcgR5WniUN2kmMuUlqiPqj8B+hG2JCNwqsxSAwzlcO8NPgSMp/9RBnNxoSYg/wh4lO8msf0RGPskf8pZBBNCF1MoQrM935tvo=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>ujao3SNpr+B2RiXdL3rNUt090Rv9E0y1xt8C2pQbJS9F+FUAkaZ+r8jqSEo/JSTULSDKD0LAev6kJIXtgsy5GktgAmv0wUWnKcvFexBNMOumBU2gG+HyN0b0wSX8i7BBxBWng1CS8JdGFeiyQ3noMJ6+Hs8j8cwcIrrdQEGnmvU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="b23d1cd39d3ce6cf47e26428c323fbecf03212eb1e65547a2870254cbdd5e6fb" Description="" Url=""><as:assemblyIdentity name="Giovannis.exe" version="1.0.0.0" publicKeyToken="e1d502f80bc10471" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-D5G1HKL\rem_j</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>bysxquwbrut0hCoEbi+OkCht2pxOFhCNyIPJzBU/M8Y=</DigestValue></Reference></SignedInfo><SignatureValue>HWacdVqiGPXsYBIicIM8Nzx2nMeXNVJ3ABgliihjaHmzjaQfmC1E2Xbj1VPSJbv0giSw/pnuC3vRc9DlnFZO34o+YOxBVAuMkYQ1c/eAtwA4UbwjYZe2jv1shwoR+3pFpnTfyfxpHj90aKIdaN3zrvjD+M5F+Y+q/3lXCfI2LX0=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>ujao3SNpr+B2RiXdL3rNUt090Rv9E0y1xt8C2pQbJS9F+FUAkaZ+r8jqSEo/JSTULSDKD0LAev6kJIXtgsy5GktgAmv0wUWnKcvFexBNMOumBU2gG+HyN0b0wSX8i7BBxBWng1CS8JdGFeiyQ3noMJ6+Hs8j8cwcIrrdQEGnmvU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQNmE62KvlEZJHm32Mn2YtDTANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAEQANQBHADEASABLAEwAXAByAGUAbQBfAGowHhcNMjIxMjIwMTY0MjU1WhcNMjMxMjIwMjI0MjU1WjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAEQANQBHADEASABLAEwAXAByAGUAbQBfAGowgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALo2qN0jaa/gdkYl3S96zVLdPdEb/RNMtcbfAtqUGyUvRfhVAJGmfq/I6khKPyUk1C0gyg9CwHr+pCSF7YLMuRpLYAJr9MFFpynLxXsQTTDrpgVNoBvh8jdG9MEl/IuwQcQVp4NQkvCXRhXoskN56DCevh7PI/HMHCK63UBBp5r1AgMBAAEwDQYJKoZIhvcNAQELBQADgYEAn9yxkrWFIrl45iqcRvz9L4xeIDTlFXF0KIEmSwH62H8xM84SL+Ag/cle62S+wpjbpUW1zOW44aR2NEy80+49i3UaCf4Zsz+j4pq/vPqJrvZ8dEPQUh3w/VBv4HSCBmKflG2ClPOOEDy5TwN0rhysLFY06M76gKWhZA+m3quGlJY=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

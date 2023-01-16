@@ -1,0 +1,654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E7A7DEB4-A6CB-4C6E-B72E-23161AF01971}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Giovannis</RootNamespace>
+    <AssemblyName>Giovannis</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B43BAB97EE06B5EBC283ECC102DED53C2E940A46</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Giovannis_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Objetos">
+      <HintPath>..\..\Objetos.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="giovannisDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>giovannisDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\BBDD\Connector.cs" />
+    <Compile Include="Modelos\BBDD\Consultas.cs" />
+    <Compile Include="Modelos\Botoneras\Administrador\botonera_administrador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Botoneras\Administrador\botonera_administrador.Designer.cs">
+      <DependentUpon>botonera_administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Botoneras\Administrador\botonera_administrador2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Botoneras\Administrador\botonera_administrador2.Designer.cs">
+      <DependentUpon>botonera_administrador2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Botoneras\Gerente\botonera_gerente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Botoneras\Gerente\botonera_gerente.Designer.cs">
+      <DependentUpon>botonera_gerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Botoneras\Gerente\botonera_gerente2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Botoneras\Gerente\botonera_gerente2.Designer.cs">
+      <DependentUpon>botonera_gerente2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Botoneras\Normal\botonera.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Botoneras\Normal\botonera.Designer.cs">
+      <DependentUpon>botonera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Clases\Cliente.cs" />
+    <Compile Include="Modelos\Clases\Empleado.cs" />
+    <Compile Include="Modelos\Clases\Entrante.cs" />
+    <Compile Include="Modelos\Clases\Fichaje.cs" />
+    <Compile Include="Modelos\Clases\Menu.cs" />
+    <Compile Include="Modelos\Clases\Notificacion.cs" />
+    <Compile Include="Modelos\Clases\Pedido.cs" />
+    <Compile Include="Modelos\Clases\Pizza.cs" />
+    <Compile Include="Modelos\Clases\Promocion.cs" />
+    <Compile Include="Modelos\Clases\Proveedor.cs" />
+    <Compile Include="Modelos\Clases\Refresco.cs" />
+    <Compile Include="Modelos\Clases\Stock.cs" />
+    <Compile Include="Modelos\Clases\Tienda.cs" />
+    <Compile Include="Modelos\Empleados\Administrador\empleados_administrador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Empleados\Administrador\empleados_administrador.Designer.cs">
+      <DependentUpon>empleados_administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Empleados\Administrador\empleado_add_administrador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Empleados\Administrador\empleado_add_administrador.Designer.cs">
+      <DependentUpon>empleado_add_administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Empleados\Administrador\empleado_administrador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Empleados\Administrador\empleado_administrador.Designer.cs">
+      <DependentUpon>empleado_administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Excepciones\ConnectionException.cs" />
+    <Compile Include="Modelos\Horarios\Adminstrador\EmpleadosAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Horarios\Adminstrador\EmpleadosAdmin.Designer.cs">
+      <DependentUpon>EmpleadosAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Horarios\Adminstrador\HorarioAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Horarios\Adminstrador\HorarioAdmin.Designer.cs">
+      <DependentUpon>HorarioAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Horarios\Gerente\Empleados.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Horarios\Gerente\Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Horarios\Gerente\Horarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Horarios\Gerente\Horarios.Designer.cs">
+      <DependentUpon>Horarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Login\Login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Menu\Administrador\Menu_add.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Menu\Administrador\Menu_add.Designer.cs">
+      <DependentUpon>Menu_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Menu\Administrador\Menu_admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Menu\Administrador\Menu_admin.Designer.cs">
+      <DependentUpon>Menu_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Menu\Administrador\Menu_panel_admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Menu\Administrador\Menu_panel_admin.Designer.cs">
+      <DependentUpon>Menu_panel_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Menu\Gerente\Menus_gerente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Menu\Gerente\Menus_gerente.Designer.cs">
+      <DependentUpon>Menus_gerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Menu\Gerente\Menu_panel_gerente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Menu\Gerente\Menu_panel_gerente.Designer.cs">
+      <DependentUpon>Menu_panel_gerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Menu\Normal\Menus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Menu\Normal\Menus.Designer.cs">
+      <DependentUpon>Menus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Menu\Normal\Menu_panel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Menu\Normal\Menu_panel.Designer.cs">
+      <DependentUpon>Menu_panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Nominas\nominas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Nominas\nominas.Designer.cs">
+      <DependentUpon>nominas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Nominas\rectangulo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Nominas\rectangulo.Designer.cs">
+      <DependentUpon>rectangulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Notificaciones\Administrador\notificaciones_administrador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Notificaciones\Administrador\notificaciones_administrador.Designer.cs">
+      <DependentUpon>notificaciones_administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Notificaciones\Administrador\notis_administrador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Notificaciones\Administrador\notis_administrador.Designer.cs">
+      <DependentUpon>notis_administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Notificaciones\Gerente\notificaciones.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Notificaciones\Gerente\notificaciones.Designer.cs">
+      <DependentUpon>notificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Notificaciones\Gerente\notis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Notificaciones\Gerente\notis.Designer.cs">
+      <DependentUpon>notis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Pedidos\Administrador\Pedidos_add.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Pedidos\Administrador\Pedidos_add.Designer.cs">
+      <DependentUpon>Pedidos_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Pedidos\Administrador\Pedidos_admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Pedidos\Administrador\Pedidos_admin.Designer.cs">
+      <DependentUpon>Pedidos_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Pedidos\Administrador\Pedidos_panel_admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Pedidos\Administrador\Pedidos_panel_admin.Designer.cs">
+      <DependentUpon>Pedidos_panel_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Pedidos\Gerente\pedidos_gerente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Pedidos\Gerente\pedidos_gerente.Designer.cs">
+      <DependentUpon>pedidos_gerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Pedidos\Gerente\pedido_gerente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Pedidos\Gerente\pedido_gerente.Designer.cs">
+      <DependentUpon>pedido_gerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Pedidos\Normal\Pedidos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Pedidos\Normal\Pedidos.Designer.cs">
+      <DependentUpon>Pedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Pedidos\Normal\Pedidos_panel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Pedidos\Normal\Pedidos_panel.Designer.cs">
+      <DependentUpon>Pedidos_panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Promociones\Administrador\promociones_administrador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Promociones\Administrador\promociones_administrador.Designer.cs">
+      <DependentUpon>promociones_administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Promociones\Administrador\promocion_administrador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Promociones\Administrador\promocion_administrador.Designer.cs">
+      <DependentUpon>promocion_administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Promociones\Gerente\promociones_gerente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Promociones\Gerente\promociones_gerente.Designer.cs">
+      <DependentUpon>promociones_gerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Promociones\Gerente\promo_gerente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Promociones\Gerente\promo_gerente.Designer.cs">
+      <DependentUpon>promo_gerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Promociones\Normal\promo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Promociones\Normal\promo.Designer.cs">
+      <DependentUpon>promo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Promociones\Normal\promocion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Promociones\Normal\promocion.Designer.cs">
+      <DependentUpon>promocion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Provedores\Administrador\proveedores_administrador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Provedores\Administrador\proveedores_administrador.Designer.cs">
+      <DependentUpon>proveedores_administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Provedores\Administrador\proveedor_administrador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Provedores\Administrador\proveedor_administrador.Designer.cs">
+      <DependentUpon>proveedor_administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Provedores\Administrador\proveedor_administrador_add.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Provedores\Administrador\proveedor_administrador_add.Designer.cs">
+      <DependentUpon>proveedor_administrador_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Provedores\Gerente\proveedores_gerente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Provedores\Gerente\proveedores_gerente.Designer.cs">
+      <DependentUpon>proveedores_gerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Provedores\Gerente\proveedor_gerente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Provedores\Gerente\proveedor_gerente.Designer.cs">
+      <DependentUpon>proveedor_gerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Stock\Administrador\ingredientes_administrador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Stock\Administrador\ingredientes_administrador.Designer.cs">
+      <DependentUpon>ingredientes_administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Stock\Administrador\stock_add_administrador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Stock\Administrador\stock_add_administrador.Designer.cs">
+      <DependentUpon>stock_add_administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Stock\Administrador\stock_administrador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Stock\Administrador\stock_administrador.Designer.cs">
+      <DependentUpon>stock_administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Stock\Administrador\stock_modificar_administrador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Stock\Administrador\stock_modificar_administrador.Designer.cs">
+      <DependentUpon>stock_modificar_administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Stock\Gerente\ingredientes_gerente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Stock\Gerente\ingredientes_gerente.Designer.cs">
+      <DependentUpon>ingredientes_gerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Stock\Gerente\stock_gerente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Stock\Gerente\stock_gerente.Designer.cs">
+      <DependentUpon>stock_gerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Stock\Normal\Ingredientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Stock\Normal\Ingredientes.Designer.cs">
+      <DependentUpon>Ingredientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Stock\Normal\Stock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modelos\Stock\Normal\Stock.Designer.cs">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Botoneras\Administrador\botonera_administrador.resx">
+      <DependentUpon>botonera_administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Botoneras\Administrador\botonera_administrador2.resx">
+      <DependentUpon>botonera_administrador2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Botoneras\Gerente\botonera_gerente.resx">
+      <DependentUpon>botonera_gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Botoneras\Gerente\botonera_gerente2.resx">
+      <DependentUpon>botonera_gerente2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Botoneras\Normal\botonera.resx">
+      <DependentUpon>botonera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Empleados\Administrador\empleados_administrador.resx">
+      <DependentUpon>empleados_administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Empleados\Administrador\empleado_add_administrador.resx">
+      <DependentUpon>empleado_add_administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Empleados\Administrador\empleado_administrador.resx">
+      <DependentUpon>empleado_administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Horarios\Adminstrador\EmpleadosAdmin.resx">
+      <DependentUpon>EmpleadosAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Horarios\Adminstrador\HorarioAdmin.resx">
+      <DependentUpon>HorarioAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Horarios\Gerente\Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Horarios\Gerente\Horarios.resx">
+      <DependentUpon>Horarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Menu\Administrador\Menu_add.resx">
+      <DependentUpon>Menu_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Menu\Administrador\Menu_admin.resx">
+      <DependentUpon>Menu_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Menu\Administrador\Menu_panel_admin.resx">
+      <DependentUpon>Menu_panel_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Menu\Gerente\Menus_gerente.resx">
+      <DependentUpon>Menus_gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Menu\Gerente\Menu_panel_gerente.resx">
+      <DependentUpon>Menu_panel_gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Menu\Normal\Menus.resx">
+      <DependentUpon>Menus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Menu\Normal\Menu_panel.resx">
+      <DependentUpon>Menu_panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Nominas\nominas.resx">
+      <DependentUpon>nominas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Nominas\rectangulo.resx">
+      <DependentUpon>rectangulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Notificaciones\Administrador\notificaciones_administrador.resx">
+      <DependentUpon>notificaciones_administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Notificaciones\Administrador\notis_administrador.resx">
+      <DependentUpon>notis_administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Notificaciones\Gerente\notificaciones.resx">
+      <DependentUpon>notificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Notificaciones\Gerente\notis.resx">
+      <DependentUpon>notis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Pedidos\Administrador\Pedidos_add.resx">
+      <DependentUpon>Pedidos_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Pedidos\Administrador\Pedidos_admin.resx">
+      <DependentUpon>Pedidos_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Pedidos\Administrador\Pedidos_panel_admin.resx">
+      <DependentUpon>Pedidos_panel_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Pedidos\Gerente\pedidos_gerente.resx">
+      <DependentUpon>pedidos_gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Pedidos\Gerente\pedido_gerente.resx">
+      <DependentUpon>pedido_gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Pedidos\Normal\Pedidos.resx">
+      <DependentUpon>Pedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Pedidos\Normal\Pedidos_panel.resx">
+      <DependentUpon>Pedidos_panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Promociones\Administrador\promociones_administrador.resx">
+      <DependentUpon>promociones_administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Promociones\Administrador\promocion_administrador.resx">
+      <DependentUpon>promocion_administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Promociones\Gerente\promociones_gerente.resx">
+      <DependentUpon>promociones_gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Promociones\Gerente\promo_gerente.resx">
+      <DependentUpon>promo_gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Promociones\Normal\promo.resx">
+      <DependentUpon>promo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Promociones\Normal\promocion.resx">
+      <DependentUpon>promocion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Provedores\Administrador\proveedores_administrador.resx">
+      <DependentUpon>proveedores_administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Provedores\Administrador\proveedor_administrador.resx">
+      <DependentUpon>proveedor_administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Provedores\Administrador\proveedor_administrador_add.resx">
+      <DependentUpon>proveedor_administrador_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Provedores\Gerente\proveedores_gerente.resx">
+      <DependentUpon>proveedores_gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Provedores\Gerente\proveedor_gerente.resx">
+      <DependentUpon>proveedor_gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Stock\Administrador\ingredientes_administrador.resx">
+      <DependentUpon>ingredientes_administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Stock\Administrador\stock_add_administrador.resx">
+      <DependentUpon>stock_add_administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Stock\Administrador\stock_administrador.resx">
+      <DependentUpon>stock_administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Stock\Administrador\stock_modificar_administrador.resx">
+      <DependentUpon>stock_modificar_administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Stock\Gerente\ingredientes_gerente.resx">
+      <DependentUpon>ingredientes_gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Stock\Gerente\stock_gerente.resx">
+      <DependentUpon>stock_gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Stock\Normal\Ingredientes.resx">
+      <DependentUpon>Ingredientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Stock\Normal\Stock.resx">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="bin\Debug\data\promociones.csv" />
+    <None Include="giovannisDataSet.xsc">
+      <DependentUpon>giovannisDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="giovannisDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>giovannisDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="giovannisDataSet.xss">
+      <DependentUpon>giovannisDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Giovannis_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Assets\settings.png" />
+    <Content Include="bin\Debug\data\giovannis.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\data\giovannis_log.ldf">
+      <DependentUpon>giovannis.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
